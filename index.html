@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Colourgarden</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <hgroup>
+            <h1>Colourgarden</h1>
+            <h2>Hello. Tom Hare did this. This is his <a href="http://twitter.com/colourgarden">Twitter</a> feed. Visit his <a href="http://github.com/colourgarden">Github</a> for code.</h2>
+        </hgroup>
+    </header>
+    <div role="main"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/tweet/2.1/jquery.tweet.js"></script>
+    <script>$(function(){ $('div[role="main"]').tweet({ username: 'colourgarden', join_text: 'auto', template: '{text}', count: 20, loading_text: 'Patience Luke...' }); });</script>
+</body>
+</html>
