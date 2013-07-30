@@ -1,0 +1,133 @@
+/*------------------------------------*\
+    Feature areas
+\*------------------------------------*/
+/**
+ * Generic
+ */
+.feature-area{
+	@extend .banner;
+}
+
+.show--portable{
+	display: none;
+	margin: 0 auto;
+}
+
+@include max-screen(1023px){
+	.hide--portable{
+		display: none;
+	}
+	.show--portable{
+		display: block;
+	}
+}
+
+
+/**
+ * FED
+ */
+@include min-screen(1024px){
+	.feature-area--fed{
+		height: 430px;
+	}
+}
+.feature-area--fed__ipad{
+	@extend .hide--portable;
+	@include size(270px 350px);
+	@include position(absolute, 0px 0 0 200px);
+	background: url(/img/front-end-1.png) no-repeat;
+}
+.feature-area--fed__iphone{
+	@extend .hide--portable;
+	@include size(143px 300px);
+	@include position(absolute, 20px 200px 0 0);
+	background: url(/img/front-end-2.png) no-repeat;
+}
+.feature-area--fed__code{
+	@extend .hide--portable;
+	@include size(244px);
+	@include position(absolute, 0 240px 0px 0);
+	background: url(/img/front-end-3.png) no-repeat;
+	z-index: 1;
+	opacity: 0;
+
+	.go &{
+		@include animation(fadeInUp .75s ease both);
+	}
+}
+
+
+/**
+ * RWD
+ */
+@include min-screen(1024px){
+	.feature-area--rwd{
+		height: 380px;
+	}
+}
+.feature-area--rwd__macbook{
+	@extend .hide--portable;
+	@include size(474px 273px);
+	@include position(absolute, 0 0 0px 50%);
+	margin-left: -237px;
+	background: url(/img/responsive-macbook.png) no-repeat;
+	@include animation(fadeInUp 1s ease both);
+}
+.feature-area--rwd__ipad{
+	@extend .hide--portable;
+	@include size(254px 330px);
+	@include position(absolute, 0px 70px 0 0);
+	background: url(/img/responsive-ipad.png) no-repeat;
+	opacity: 0;
+
+	.go &{
+		@include animation(fadeInDown .6s ease both);
+	}
+}
+.feature-area--rwd__iphone{
+	@extend .hide--portable;
+	@include size(143px 300px);
+	@include position(absolute, 40px 0 0 140px);
+	background: url(/img/responsive-iphone.png) no-repeat;
+	opacity: 0;
+
+	.go &{
+		@include animation(fadeInDown .6s ease both);
+		@include animation-delay(.4s);
+	}
+}
+
+
+/**
+ * CMS
+ */
+.feature-area--cms{
+
+	img{
+		@include animation(fadeInUp 1s ease both);
+	}
+
+	[data-icon]{
+		position: absolute;
+		font-size: 60px;
+		opacity: 0;
+	}
+	.ico--fed[data-icon]{
+		@extend .fed--text;
+		top: 90px;
+		left: 100px;
+	}
+	.ico--cms[data-icon]{
+		@extend .cms--text;
+		top: 160px;
+		right: 85px;
+	}
+
+	/* Trigger animations */
+	&.go .ico--fed[data-icon]{
+		@include animation(fadeInDown 1s ease both);
+	}
+	&.go .ico--cms[data-icon]{
+		@include animation(fadeInUp 1s ease both);
+	}
+}

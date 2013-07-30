@@ -1,0 +1,295 @@
+/*------------------------------------*\
+    Content
+\*------------------------------------*/
+/**
+ * Banners
+ */
+.banner{
+	@extend .cf;
+	position: relative;
+	margin-bottom: $base-spacing-unit;
+
+	@include min-screen(968px){
+		width: 110%;
+		margin-left: -5%;
+	}
+}
+.banner img{
+	max-width: 100%;
+}
+
+
+/**
+ * Services colour schemes
+ */
+.fed--text{
+	color: #ec6231;
+}
+.cms--text{
+	color: #21759b;
+}
+.pro--text{
+	color: #5ba525;
+}
+
+.fed--bg{
+	background: #ec6231;
+}
+.cms--bg{
+	background: #21759b;
+}
+.pro--bg{
+	background: #5ba525;
+}
+
+
+/**
+ * Homepage services
+ */
+.services{
+	@extend .grid;
+}
+.services__block{
+	@extend .grid__item;
+	@extend .one-half;
+	@extend .portable--one-whole;
+	margin-bottom: 1.5em;
+}
+
+.services__heading--fed:before{
+	@extend .fed--text;
+}
+.services__heading--cms:before{
+	@extend .cms--text;
+}
+.services__heading--strategy:before{
+	@extend .pro--text;
+}
+
+
+/**
+ * Services nav
+ */
+.services-nav{
+	margin-top: $base-spacing-unit*2;
+
+	ul{
+		@extend .grid;
+	}
+
+	li{
+		@extend .grid__item;
+		@extend .one-quarter;
+		@extend .lap--one-half;
+		@extend .palm--one-whole;
+	}
+
+	a{
+		position: relative;
+		display: inline-block;
+		padding: $base-spacing-unit $base-spacing-unit/2;
+		margin-bottom: $base-spacing-unit/4;
+		background: $dark;
+		text-align: center;
+		text-decoration: none;
+		font-variant: small-caps;
+		color: #fff;
+
+		&:hover{
+			&:before{
+				display: block;
+			}
+			&:after{
+				top: 0;
+			}
+		}
+
+		&:before{
+			display: none;
+			@include position(absolute, 25px 0 0 50%);
+			margin-left: -30px;
+			z-index: 1;
+			font-size: 60px;
+		}
+		&:after{
+			content: '';
+			@include position(absolute, 0 0px 0px 0px);
+			background: $dark;
+		}
+
+		&.current{
+			
+			&:before{
+				display: block;
+			}
+			&:after{
+				top: 0;
+			}
+
+			&:hover{
+				&:before{
+					display: none;
+				}
+				&:after{
+					top: auto;
+				}
+			}
+		}
+
+		&.fed:after{
+			@extend .fed--bg;
+		}
+		&.cms:after{
+			@extend .cms--bg;
+		}
+		&.pro:after{
+			@extend .pro--bg;
+		}
+
+		@include max-screen(1023px){
+			display: block;
+
+			&:before{
+				top: 15%;
+			}
+		}
+	}
+}
+
+
+/**
+ * Work
+ */
+/* Homepage shots */
+.work-shots{
+	@extend .cf;
+	@extend .grid;
+
+	li{
+		position: relative;
+		@extend .grid__item;
+		@extend .one-half;
+		@extend .palm--one-whole;
+		max-width: 100%;
+		list-style: none;
+		overflow: hidden;
+
+		@include max-screen(480px){
+			margin-bottom: $base-spacing-unit;
+		}
+	}
+
+	img{
+		border: 10px $dark solid;
+		margin-bottom: $base-spacing-unit/2;
+	}
+
+	h4{
+		margin-bottom: 10px;
+	}
+}
+
+/* Work section */
+.work{
+	@extend .grid;
+}
+.work__block{
+	@extend .grid__item;
+	margin-bottom: $base-spacing-unit;
+}
+
+.work--lead{
+	margin-bottom: $base-spacing-unit*2;
+}
+.work--feature{
+	font-size: 0.95em;
+
+	.work__block{
+		@extend .one-half;
+		@extend .palm--one-whole;
+	}
+}
+.work--other{
+	font-size: 0.85em;
+
+	.work__block{
+		@extend .one-third;
+		@extend .lap--one-half;
+		@extend .palm--one-half;
+	}
+
+	h4{
+		margin-bottom: 0.75em;
+	}
+
+	p{
+		margin-bottom: 1em;
+	}
+}
+
+.work__work-item{
+	margin-bottom: $base-spacing-unit;
+
+	@include min-screen(1023px){
+		margin-bottom: $base-spacing-unit*2;
+		border: 1px #e3e3e3 solid;
+		border-bottom-width: 3px;
+	}
+}
+.work-item__screenshot{
+	margin-bottom: $base-spacing-unit;
+}
+
+@include min-screen(1023px){
+	.work-item__content{
+		padding: 0 $base-spacing-unit $base-spacing-unit/2;
+	}
+}
+
+.agency{
+	&, a{
+		color: #aaa;
+	}
+}
+
+
+/**
+ * Client logos
+ */
+.client-logos{
+	@extend .cf;
+	margin-left: 0;
+	margin-bottom: $base-spacing-unit*4.5;
+	margin-bottom: 4.5rem;
+
+	li{
+		float: left;
+		max-width: 100%;
+		@extend .one-quarter;
+		@extend .palm--one-half;
+		list-style: none;
+		margin-bottom: 10px;
+		text-align: center;
+	}
+}
+
+
+/**
+ * About
+ */
+.country{
+	position: absolute;
+	top: 165px;
+	font-size: 70px;
+	font-family: "Geobats";
+	color: rgba(0,0,0,0.7);
+	z-index: 1;
+	cursor: default;
+}
+
+.uk{
+	left: 16%;
+}
+.aus{
+	right: 12%;
+}
