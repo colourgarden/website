@@ -1,45 +1,35 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://colourgarden.net/jekyll/update/2013/07/05/welcome-to-jekyll.html</loc>
-        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://colourgarden.net/about/about/</loc>
-        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://colourgarden.net/contact/contact/</loc>
-        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://colourgarden.net/contact/contact/success.html</loc>
-        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
-    </url>
-    <url>
-        <loc>http://colourgarden.net/front-end-development/front-end-development/</loc>
-        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
-    </url>
-    <url>
         <loc>http://colourgarden.net/</loc>
         <lastmod>2013-07-31T12:49:30+01:00</lastmod>
     </url>
     <url>
-        <loc>http://colourgarden.net/process-and-strategy/process-and-strategy/</loc>
+        <loc>http://colourgarden.net/front-end-development/</loc>
         <lastmod>2013-07-31T12:49:30+01:00</lastmod>
     </url>
     <url>
-        <loc>http://colourgarden.net/responsive-web-design/responsive-web-design/</loc>
+        <loc>http://colourgarden.net/process-and-strategy/</loc>
         <lastmod>2013-07-31T12:49:30+01:00</lastmod>
     </url>
     <url>
-        <loc>
-            http://colourgarden.net/wordpress-and-cms-integration/wordpress-and-cms-integration/
-        </loc>
+        <loc>http://colourgarden.net/responsive-web-design/</loc>
         <lastmod>2013-07-31T12:49:30+01:00</lastmod>
     </url>
     <url>
-        <loc>http://colourgarden.net/work/work/</loc>
+        <loc>http://colourgarden.net/wordpress-and-cms-integration/</loc>
+        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://colourgarden.net/work/</loc>
+        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://colourgarden.net/about/</loc>
+        <lastmod>2013-07-31T12:49:30+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://colourgarden.net/contact/</loc>
         <lastmod>2013-07-31T12:49:30+01:00</lastmod>
     </url>
 </urlset>
