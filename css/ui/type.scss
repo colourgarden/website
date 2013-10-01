@@ -143,6 +143,14 @@ h3, .h3{
 	@include max-screen(480px){
 		font-size: $h4-size;
 	}
+
+	// Chrome hack for weird icon font sizing/position
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+	 &:before{
+	 	@include position(relative, 2px 0 0 0);
+	 	font-size: 26px;
+	 }
+	}
 }
 h4, .h4{
 	font-size: $h4-size;
