@@ -1,0 +1,21 @@
+/**
+ * Base list styling.
+ *
+ * 1. Set a sensible browser default override.
+ */
+
+dd,
+ol,
+ul {
+  margin-left: var(--spacing-unit); // [1]
+}
+
+
+/**
+ * Stacked list with default styling (such as bullets) removed.
+ */
+
+.list-unstyled {
+  margin-left: 0;
+  list-style: none;
+}

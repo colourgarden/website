@@ -1,0 +1,17 @@
+/**
+ * Page container.
+ */
+
+:root {
+  --container-padding: 0 5%;
+
+  @media (min-width: 750px) {
+    --container-padding: 0 40px;
+  }
+}
+
+.container {
+  max-width: 55rem;
+  padding: var(--container-padding);
+  margin: 0 auto;
+}

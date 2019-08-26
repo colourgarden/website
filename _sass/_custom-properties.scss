@@ -1,0 +1,63 @@
+/**
+ * Global CSS Custom Properties.
+ */
+
+:root {
+
+  // Modular scale text settings.
+  --text-scale: 1.1;
+  --text-size: 0.875rem;
+
+  @media (min-width: 500px) {
+    --text-scale: 1.125;
+    --text-size: 0.9375rem;
+  }
+
+  @media (min-width: 800px) {
+    --text-size: 1rem;
+  }
+
+  --h6-size: calc(var(--text-size) * var(--text-scale));
+  --h5-size: calc(var(--h6-size) * var(--text-scale));
+  --h4-size: calc(var(--h5-size) * var(--text-scale));
+  --h3-size: calc(var(--h4-size) * var(--text-scale));
+  --h2-size: calc(var(--h3-size) * var(--text-scale));
+  --h1-size: calc(var(--h2-size) * var(--text-scale));
+
+
+  // Font settings.
+  --font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-weight: 400;
+  --line-height: 1.45;
+
+
+  // Utilities.
+  --spacing-unit: 1.5rem;
+
+
+  // Colour palette.
+  --text-color: #283c46;
+  --text-color-contrast: #283c46;
+
+  --body-bg: #fff;
+  --body-border: #ee7752;
+
+  --link-color: var(--body-color);
+  --link-color-hocus: #00f;
+  --link-color-active: var(--link-color-hocus);
+
+  --heading-color: #121212;
+
+  --c-brand: #f8bea1;
+  --c-secondary: #44318d;
+  --c-accent: #f8e9a1;
+
+  // Dark mode colour pallette.
+  @media (prefers-color-scheme: dark) {
+    --text-color: #f2f2f2;
+    --body-bg: #16161d;
+    --body-border: #38194c;
+
+    --link-color-hocus: #f8e9a1;
+  }
+}

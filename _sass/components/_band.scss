@@ -1,0 +1,41 @@
+/**
+ * Page bands.
+ */
+
+:root {
+  --band-padding: 30px 0;
+
+  @media (min-width: 500px) {
+    --band-padding: 30px 0;
+  }
+
+  @media (min-width: 750px) {
+    --band-padding: 50px 0;
+  }
+}
+
+.band {
+  padding: var(--band-padding);
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &--accent {
+    background-color: var(--c-accent);
+    color: var(--text-color-contrast);
+
+    a {
+      &:hover,
+      &:focus {
+        color: var(--text-color-contrast);
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &--brand {
+    background-color: var(--c-brand);
+    color: var(--text-color-contrast);
+  }
+}

@@ -1,0 +1,19 @@
+/**
+ * Rows of content with first element as sidebar.
+ */
+
+:root {
+  --titled-section-gap: 2rem;
+}
+
+.titled-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0 var(--titled-section-gap);
+  grid-auto-flow: row;
+
+  @media (min-width: 750px) {
+    grid-template-columns: 1fr 3fr;
+    grid-gap: var(--titled-section-gap);
+  }
+}

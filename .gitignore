@@ -1,9 +1,4 @@
-.sass-cache
-*~
-.DS_Store
-.svn
-.cvs
-*.bak
-*.swp
-Thumbs.db
-*.log
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

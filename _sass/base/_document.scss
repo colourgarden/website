@@ -1,0 +1,22 @@
+/**
+ * Base page setup.
+ *
+ * 1. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 2. Ensure the page always fills at least the entire height of the viewport.
+ * 3. Hide overflowing elements on mobile/narrow devices.
+ */
+
+html {
+  overflow-y: scroll; // [1]
+  min-height: 100%; // [2]
+}
+
+body {
+  overflow-x: hidden; // [3]
+  background-color: var(--body-bg);
+  border-style: solid;
+  border-color: var(--body-border);
+  border-width: 10px 0;
+}

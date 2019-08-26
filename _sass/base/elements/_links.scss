@@ -1,0 +1,17 @@
+/**
+ * Base link styling.
+ */
+
+a {
+  color: var(--link-color);
+  text-decoration-skip: edges;
+
+  &:hover,
+  &:focus {
+    color: var(--link-color-hocus);
+  }
+
+  &:active {
+    color: var(--link-color-active);
+  }
+}

@@ -1,0 +1,95 @@
+/**
+ * Global typography defaults.
+ *
+ * 1. Improve font rendering on certain browsers.
+ */
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--text-size);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--text-color);
+  -webkit-text-size-adjust: 100%; // [1]
+  -ms-text-size-adjust: 100%; // [1]
+  -moz-osx-font-smoothing: grayscale; // [1]
+  -webkit-font-smoothing: antialiased; // [1]
+  text-rendering: optimizeLegibility; // [1]
+}
+
+
+/**
+ * H1-H6 headings.
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.85em;
+
+  small {
+    font-size: 0.5em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+}
+
+h1,
+%h1 {
+  margin-bottom: 1em;
+  font-size: 2.4rem;
+  font-size: var(--h1-size);
+  font-weight: 780;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+
+h2,
+%h2 {
+  margin-bottom: 1.15em;
+  font-size: 1.75rem;
+  font-size: var(--h2-size);
+  font-weight: 710;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+
+  &:after {
+    display: block;
+    width: 50px;
+    height: 5px;
+    margin-top: 0.15em;
+    background-color: currentColor;
+    content: '';
+  }
+}
+
+h3,
+%h3 {
+  margin-bottom: 1em;
+  font-size: 1.375rem;
+  font-size: var(--h3-size);
+  font-weight: 720;
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+}
+
+
+/**
+ * Paragraphs.
+ */
+
+p {
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+/**
+ * Code.
+ *
+ *1. @see https://stackoverflow.com/questions/36524272/why-does-firefox-not-honor-css-font-size-for-code-tags-wrapped-in-pre
+ */
+
+code {
+  font-family: monospace, monospace; // [1]
+}

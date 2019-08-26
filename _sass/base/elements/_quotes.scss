@@ -1,0 +1,21 @@
+/**
+ * Blockquote styling.
+ */
+
+blockquote {
+  margin-bottom: 0.75em;
+
+  p {
+    margin-bottom: 0.75em;
+  }
+
+  cite {
+    font-weight: 580;
+    font-style: normal;
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+  }
+}
