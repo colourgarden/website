@@ -2,20 +2,40 @@
  * Load webfonts.
  */
 
+@mixin fontFace($filename, $style: normal, $weight: 400) {
+  @font-face {
+    font-family: 'Inter';
+    font-style: #{$style};
+    font-weight: #{$weight};
+    font-display: swap;
+    src: url('/assets/fonts/#{$filename}.woff2') format('woff2'),
+         url('/assets/fonts/#{$filename}.woff') format('woff');
+  }
+}
+
+// Regular fonts.
+@include fontFace('Inter-Regular');
+@include fontFace('Inter-Italic', 'italic');
+@include fontFace('Inter-Medium', 'normal', 500);
+@include fontFace('Inter-MediumItalic', 'italic', 500);
+@include fontFace('Inter-Bold', 'normal', 700);
+@include fontFace('Inter-BoldItalic', 'italic', 700);
+
+// Variable fonts.
 @font-face {
-  font-family: Inter;
-  font-display: swap;
+  font-family: 'Inter var';
   font-weight: 100 900;
   font-style: normal;
   font-named-instance: 'Regular';
-  src: url(/assets/fonts/Inter-upright.var.woff2) format('woff2');
+  font-display: swap;
+  src: url('/assets/fonts/Inter-roman.var.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: Inter;
-  font-display: swap;
+  font-family: 'Inter var';
   font-weight: 100 900;
   font-style: italic;
   font-named-instance: 'Italic';
-  src: url(/assets/fonts/Inter-italic.var.woff2) format('woff2');
+  font-display: swap;
+  src: url('/assets/fonts/Inter-italic.var.woff2') format('woff2');
 }
