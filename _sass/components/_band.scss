@@ -17,8 +17,9 @@
 .band {
   padding: var(--band-padding);
 
-  &--white {
-    background-color: #fff;
+  &--primary {
+    background-color: var(--c-primary);
+    color: var(--text-color-contrast);
   }
 
   &--accent {
@@ -32,10 +33,5 @@
         opacity: 0.8;
       }
     }
-  }
-
-  &--brand {
-    background-color: var(--c-brand);
-    color: var(--text-color-contrast);
   }
 }

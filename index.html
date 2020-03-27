@@ -16,6 +16,27 @@ layout: default
         <p>I specialise in building design systems and pattern libraries used to power user interfaces on the web. With over 13 years of professional experience, I also implement processes to increase collaboration and encourage understanding between design and development teams.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="band band--primary">
+  <div class="container">
+    <h2>Work <small>(more on request)</small></h2>
+    <div class="teaser-boxes">
+      {% assign projects = site.work | sort: 'order' %}
+      {% for project in projects %}
+        <a class="teaser-box teaser-box--{{ project.slug }}" href="{{ project.link }}" target="_blank">
+          <p class="teaser-box__subtitle">{{ project.type }}</p>
+          <h3 class="teaser-box__title">{{ project.title }} &#8599;</h3>
+          {{ project.teaser }}
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
     <div class="titled-section">
       <h3>Things I do all day, every day</h3>
       <ul class="listy listy--heart">
@@ -34,10 +55,11 @@ layout: default
       </ul>
       <h3>Things I do from time-to-time</h3>
       <ul class="listy listy--up">
-        <li>Build Wordpress themes (yes, I know what hooks and filters are!)</li>
+        <li>Build hobby projects with <a href="https://laravel.com" target="_blank">Laravel</a></li>
         <li>Tinker around with <a href="https://vuejs.org/" target="_blank">Vue.js</a></li>
-        <li>Travel to new places to complete my goal of visiting 100 countries in my lifetime</li>
+        <li>Build Wordpress themes (yes, I know what hooks and filters are!)</li>
         <li>Edge down my 5k and 10k times (22 and 56 min PBs)</li>
+        <li>Travel to new places to complete my goal of visiting 100 countries in my lifetime</li>
       </ul>
     </div>
   </div>
@@ -87,21 +109,5 @@ layout: default
     <p>All that we are is simply a collection of our own individual experiences. What I find normal may be unacceptable to others. What my culture accepts as truth may be questioned by another.</p>
     <p>I always aim to put myself in other peoples' shoes when viewing a situation. What makes them see this in a different way from me? How can we solve this so we both get what we want?</p>
     <p>To understand others, you have to go and see the world through their eyes. For this reason, a primary goal of my life is to visit and experience as many countries and cultures as possible. Because when I can see the world through another's eyes, there's no longer any need to be afraid of what I see looking back at me.</p>
-  </div>
-</section>
-
-<section class="band band--brand">
-  <div class="container">
-    <h2>Work <small>(more on request)</small></h2>
-    <div class="teaser-boxes">
-      {% assign projects = site.work | sort: 'order' %}
-      {% for project in projects %}
-        <a class="teaser-box teaser-box--{{ project.slug }}" href="{{ project.link }}" target="_blank">
-          <p class="teaser-box__subtitle">{{ project.type }}</p>
-          <h3 class="teaser-box__title">{{ project.title }} &#8599;</h3>
-          {{ project.teaser }}
-        </a>
-      {% endfor %}
-    </div>
   </div>
 </section>
