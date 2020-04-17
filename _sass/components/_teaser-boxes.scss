@@ -16,11 +16,10 @@
   overflow: hidden;
   padding: 1.5rem;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: var(--body-bg);
   text-decoration: none;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
   }
 
@@ -37,20 +36,40 @@
     content: '';
   }
 
-  &--ccleaner:after {
-    border-color: transparent #82a91c transparent;
+  &--ccleaner {
+    &:after {
+      border-color: transparent #82a91c transparent;
+    }
+    &:hover {
+      background-color: #82a91c;
+    }
   }
 
-  &--monitor:after {
-    border-color: transparent #171515 transparent;
+  &--monitor {
+    &:after {
+      border-color: transparent #000 transparent;
+    }
+    &:hover {
+      background-color: #000;
+    }
   }
 
-  &--avalanche:after {
-    border-color: transparent #27aae1 transparent;
+  &--avalanche {
+    &:after {
+      border-color: transparent #27aae1 transparent;
+    }
+    &:hover {
+      background-color: #27aae1;
+    }
   }
 
-  &--bacon:after {
-    border-color: transparent #c90000 transparent;
+  &--bacon {
+    &:after {
+      border-color: transparent #c90000 transparent;
+    }
+    &:hover {
+      background-color: #c90000;
+    }
   }
 }
 
