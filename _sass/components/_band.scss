@@ -17,21 +17,7 @@
 .band {
   padding: var(--band-padding);
 
-  &--primary {
-    background-color: var(--c-primary);
-    color: var(--text-color-contrast);
-  }
-
-  &--accent {
-    background-color: var(--c-accent);
-    color: var(--text-color-contrast);
-
-    a {
-      &:hover,
-      &:focus {
-        color: var(--text-color-contrast);
-        opacity: 0.8;
-      }
-    }
+  &--alt {
+    background-color: var(--body-bg-alt);
   }
 }

@@ -44,26 +44,23 @@
 
   // Colour palette.
   --text-color: #283c46;
-  --text-color-contrast: #283c46;
+  --text-color-contrast: #0c1824;
 
   --body-bg: #fff;
-  --footer-bg: #fafafa;
+  --body-bg-alt: #f8f8fb;
+  --footer-bg: #fbc75d;
 
   --link-color: var(--body-color);
   --link-color-hocus: #00f;
   --link-color-active: var(--link-color-hocus);
 
-  --heading-color: #121212;
-
   --c-primary: #ffaaab;
-  --c-secondary: #44318d;
-  --c-accent: #ffe7a9;
 
   // Dark mode colour pallette.
   @media (prefers-color-scheme: dark) {
     --text-color: #f2f2f2;
-    --body-bg: #091f36;
-    --footer-bg: #04111e;
+    --body-bg: #0c1824;
+    --body-bg-alt: #070e15;
 
     --link-color-hocus: #f8e9a1;
   }
